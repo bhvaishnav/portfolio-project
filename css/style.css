@@ -503,6 +503,16 @@ img { max-width: 100%; display: block; }
   letter-spacing: 6px;
 }
 
+.avatar-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 3;
+  box-shadow: 0 0 30px rgba(0,240,255,0.3), 0 0 60px rgba(0,240,255,0.1);
+  border: 3px solid rgba(0,240,255,0.3);
+}
+
 /* ══════════════════════════════════════════════════
    ABOUT
    ══════════════════════════════════════════════════ */
