@@ -1,0 +1,27 @@
+<section class="hero" id="hero-section">
+  <div class="hero__bg-grid"></div>
+
+  <div class="hero__content">
+    <p class="hero__greeting fade-in-up">{{ greeting }}</p>
+    <h1 class="hero__name glitch" data-text="Bhavesh Vaishnav" id="hero-name">{{ name }}</h1>
+    <p class="hero__tagline fade-in-up" id="hero-tagline">{{ tagline }}</p>
+    <p class="hero__description fade-in-up">{{ description }}</p>
+
+    <div class="hero__role-wrapper fade-in-up">
+      <span class="hero__role-label">I am a&nbsp;</span>
+      <span class="hero__role neon-text" id="rotating-role">{{ currentRole }}</span>
+      <span class="cursor-blink">|</span>
+    </div>
+
+    <div class="hero__cta fade-in-up">
+      <a href="#!/projects" class="btn btn--primary" id="cta-projects">View Projects</a>
+      <a href="#!/contact" class="btn btn--outline" id="cta-contact">Contact Me</a>
+    </div>
+  </div>
+
+  <div class="hero__avatar fade-in-up" id="hero-avatar">
+    <div class="avatar-ring"></div>
+    <div class="avatar-ring avatar-ring--2"></div>
+    <span class="avatar-initials">BV</span>
+  </div>
+</section>

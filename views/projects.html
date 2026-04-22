@@ -1,0 +1,16 @@
+<section class="projects" id="projects-section">
+  <h2 class="section-title fade-in-up">My <span class="neon-text">Projects</span></h2>
+
+  <div class="projects__grid">
+    <div class="glass-card project-card fade-in-up"
+         ng-repeat="project in projects"
+         id="project-card-{{ $index }}">
+      <div class="project-card__icon">{{ project.icon }}</div>
+      <h3 class="project-card__name">{{ project.name }}</h3>
+      <p class="project-card__desc">{{ project.description }}</p>
+      <div class="project-card__tags">
+        <span class="tag" ng-repeat="tag in project.tags">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+</section>

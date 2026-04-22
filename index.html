@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolioApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bhavesh Vaishnav — IT Engineering Student, Python Developer, AI Enthusiast. Explore my portfolio, projects, and get in touch.">
+  <title>Bhavesh Vaishnav — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="main-navbar">
+    <a href="#!/" class="nav-logo" id="nav-logo">
+      <span class="logo-glyph">BV</span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" ng-click="menuOpen = !menuOpen" ng-class="{'is-open': menuOpen}">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="nav-links" ng-class="{'show': menuOpen}">
+      <a href="#!/"        ng-class="{active: isActive('/')}"        ng-click="menuOpen = false" id="nav-home">Home</a>
+      <a href="#!/about"   ng-class="{active: isActive('/about')}"   ng-click="menuOpen = false" id="nav-about">About</a>
+      <a href="#!/projects" ng-class="{active: isActive('/projects')}" ng-click="menuOpen = false" id="nav-projects">Projects</a>
+      <a href="#!/contact" ng-class="{active: isActive('/contact')}" ng-click="menuOpen = false" id="nav-contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN VIEW ===== -->
+  <main class="page-wrapper">
+    <div ng-view class="view-animate"></div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" id="site-footer">
+    <p>&copy; 2026 Bhavesh Vaishnav &middot; Built with AngularJS</p>
+  </footer>
+
+  <!-- ===== FLOATING PARTICLES (decorative) ===== -->
+  <div class="particle particle--1"></div>
+  <div class="particle particle--2"></div>
+  <div class="particle particle--3"></div>
+  <div class="particle particle--4"></div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="routes.js"></script>
+  <script src="controllers/homeController.js"></script>
+  <script src="controllers/aboutController.js"></script>
+  <script src="controllers/projectController.js"></script>
+  <script src="controllers/contactController.js"></script>
+</body>
+</html>

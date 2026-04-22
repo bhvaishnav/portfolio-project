@@ -1,0 +1,32 @@
+<section class="about" id="about-section">
+  <h2 class="section-title fade-in-up">About <span class="neon-text">Me</span></h2>
+
+  <div class="about__grid">
+    <!-- Bio card -->
+    <div class="glass-card about__bio fade-in-up" id="about-bio">
+      <h3>Who I Am</h3>
+      <p>{{ bio }}</p>
+
+      <div class="about__hobbies">
+        <h4>Hobbies</h4>
+        <ul class="hobby-list">
+          <li ng-repeat="hobby in hobbies" class="hobby-chip">{{ hobby }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Skills card -->
+    <div class="glass-card about__skills fade-in-up" id="about-skills">
+      <h3>Skills</h3>
+      <div class="skill" ng-repeat="skill in skills">
+        <div class="skill__header">
+          <span class="skill__name">{{ skill.name }}</span>
+          <span class="skill__percent">{{ skill.percent }}%</span>
+        </div>
+        <div class="skill__track">
+          <div class="skill__bar" ng-style="{'width': skill.percent + '%'}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
